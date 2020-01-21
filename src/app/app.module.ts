@@ -7,13 +7,15 @@ import { MaximeComponent } from './maxime/maxime.component';
 import { RouterModule } from '@angular/router';
 import { NavigatieComponent } from './navigatie/navigatie.component';
 import { AmauryComponent } from './amaury/amaury.component';
+import { UsmanComponent } from './usman/usman.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MaximeComponent,
     NavigatieComponent,
-    AmauryComponent
+    AmauryComponent,
+    UsmanComponent
   ],
   imports: [
     BrowserModule,
