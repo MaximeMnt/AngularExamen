@@ -23,6 +23,7 @@ import { UsmanComponent } from './usman/usman.component';
     RouterModule.forRoot([
       {path: "Maxime",component:MaximeComponent},
       {path: "Amaury", component: AmauryComponent},
+      {path: "Usman", component: UsmanComponent},
       {path: "", redirectTo: "Maxime", pathMatch:"full"}
     ], {useHash:true})
   ],
