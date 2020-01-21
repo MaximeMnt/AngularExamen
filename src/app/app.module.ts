@@ -5,17 +5,23 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MaximeComponent } from './maxime/maxime.component';
 import { RouterModule } from '@angular/router';
+import { NavigatieComponent } from './navigatie/navigatie.component';
+import { AmauryComponent } from './amaury/amaury.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MaximeComponent
+    MaximeComponent,
+    NavigatieComponent,
+    AmauryComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot([
-      {path: "Maxime",component:MaximeComponent}
+      {path: "Maxime",component:MaximeComponent},
+      {path: "Amaury", component: AmauryComponent},
+      {path: "", redirectTo: "Maxime", pathMatch:"full"}
     ], {useHash:true})
   ],
   providers: [],
