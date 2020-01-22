@@ -1,0 +1,14 @@
+body {
+    padding-top: 0rem;
+}
+
+#keuze{
+    font-size: 5rem;
+    color: darkorange;
+}
+
+#divElement{
+    background-color:red;
+    height: 200px;
+    width: 200px;
+}
