@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as _ from 'lodash';    
-
+ 
 
 @Component({
   selector: 'app-maxime',
@@ -12,6 +12,13 @@ export class MaximeComponent implements OnInit {
 date : Date = new Date();
 counter: number = 0; 
 RandomNumber: number = 0;
+
+//oefening 1:
+data: string[] = [ "koek","kaas", "vis", "croissant fromage" ];
+userData: string[] = [];
+buttonStatus:boolean = true;
+textValue:string;
+
 
 
 constructor() {
@@ -27,7 +34,23 @@ constructor() {
     this.RandomNumber = _.random(1,100);
   },2000);
 
+    this.checkIfChanged();
  }
+
+
+
+checkIfChanged = () => {
+  if(this.textValue!=null){
+    this.buttonStatus = false;
+  } else this.buttonStatus = true;
+} 
+ 
+addValue = () => {
+  if(this.textValue == "penis"){
+    alert("wow jij wist het geheime wachtwoord wtf");
+  }
+  this.userData.push(this.textValue);
+}
 
   ngOnInit() {
   }

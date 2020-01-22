@@ -2,13 +2,34 @@
 <body>
 
 <app-navigatie></app-navigatie>
-<p>maxime works!</p>
+<p>maxime is hot!</p>
 <div id="datetime"><p>{{date | date: 'HH:mm:ss'}}</p></div>
 
 {{counter}}
 <br><br>
 {{RandomNumber}}
 
+
+<table *ngIf="data">
+
+    <tr #in10 type="number" value="5" *ngFor="let item of data">
+        <td>
+        <i><b>{{item}}</b></i>
+        </td>
+    </tr>
+
+</table>
+
+<br><br><br>
+<p><b>Geef iets moois in, maak papa trots!</b></p>
+<input type="text" placeholder="typ iets moois hier" [(ngModel)]="textValue" (keypress)="checkIfChanged()" /><br><br>
+<button [disabled]="buttonStatus" (click)="addValue()">klik op mij als je kan!</button>
+
+<tr *ngFor="let item of userData">
+    <td>
+        {{item}}
+    </td>
+</tr>
 
 
 </body>
