@@ -49,5 +49,74 @@
 
 
 </div>
+<br><br>
+<button pButton type="button" label="Yes" class="ui-button-danger"></button>
+<button pButton type="button" label="No" class="ui-button-info"></button>
+<br><br>
+<button pButton type="button" label="Hallo Wereld" class="ui-button-raised ui-button-rounded"></button>
+
+<br><br>
+<p-colorPicker></p-colorPicker>
+<br>
+
+
+<hr>
+<h3>Angular 4 oefeningen:</h3>
+
+<p-card header="Advanced Card" subheader="Subheader" [style]="{width: '360px'}" styleClass="ui-card-shadow">
+    <p-header>
+        <img src="Card" [src]="imageUrl">
+    </p-header>
+    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
+        quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</div>   
+</p-card>
+
+
+<h3>NumberShit</h3>
+
+<button pButton type="button" class="ui-button-raised ui-button-rounded" (click)="setInputValue(inputValue.value)" label="{{calcCounter}}"></button>
+<input type="number" value="0" #inputValue>
+<button pButton type="button" class="ui-button-raised ui-button-rounded" (click)="Increment()" label="{{calcCounter}}"></button>
+
+
+<h3>Event Binding 4</h3>
+
+<div id="divElement" (mousemove)=getCoords($event)>{{coords}}</div>
+
+<br><br><br>
+
+<h3>ToDo lijst</h3>
+
+<span class="ui-float-label">
+    <input id="float-input" type="text" size="30" pInputText #valueInputTodoList (keyup)="todoChanged(valueInputTodoList.value)"> 
+    <label for="float-input">Username</label>
+    <button pButton type="button" icon="pi pi-check" [disabled]=buttonIsEmpty (click)=ToDoListAdd(valueInputTodoList.value)></button>
+
+</span>
+
+<br>
+<ol *ngIf="toDoItems">
+<li *ngFor="let item of toDoItems">{{item}} <button pButton type="button" label="X" class="ui-button-rounded" (click)="deleteitem(item.indexOf())"></button>
+</li>
+</ol>
+<p *ngIf="toDoItems.length == 0">de lijst is leeg.</p>
+
+
+<br><br><br>
+<h3>Calculator</h3>
+<div>
+<input id="input" disabled type="text" size="30" pInputText value="{{display}}">
+    <table>
+        <tr *ngFor="let row of numbers">
+          <td *ngFor="let number of row">
+            <button pButton label="{{number}}" (click)="Getal(number)"></button>
+          </td>
+        </tr>
+      </table>
+</div>
+
+
+
+
 </body>
 </html>

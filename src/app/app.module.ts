@@ -2,6 +2,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms'
+import {ButtonModule} from 'primeng/button';
+import {ColorPickerModule} from 'primeng/colorpicker';
+import {CardModule} from 'primeng/card';
+import {InputTextModule} from 'primeng/inputtext';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -24,6 +29,10 @@ import { UsmanComponent } from './usman/usman.component';
     BrowserAnimationsModule,
     AppRoutingModule,
     FormsModule,
+    ButtonModule,
+    ColorPickerModule,
+    CardModule,
+    InputTextModule,
     RouterModule.forRoot([
       {path: "Maxime",component:MaximeComponent},
       {path: "Amaury", component: AmauryComponent},
