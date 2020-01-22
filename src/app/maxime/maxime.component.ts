@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import * as _ from 'lodash';    
+
 
 @Component({
   selector: 'app-maxime',
@@ -7,7 +9,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MaximeComponent implements OnInit {
 
-  constructor() { }
+date : Date = new Date();
+counter: number = 0; 
+RandomNumber: number = 0;
+
+
+constructor() {
+  setInterval(() => {
+    this.date = new Date();
+  }, 1);
+
+  setInterval(() =>{
+  this.counter++;
+  },200);
+
+  setInterval(()=>{
+    this.RandomNumber = _.random(1,100);
+  },2000);
+
+ }
 
   ngOnInit() {
   }
