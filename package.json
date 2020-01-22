@@ -19,7 +19,11 @@
     "@angular/platform-browser": "~8.2.13",
     "@angular/platform-browser-dynamic": "~8.2.13",
     "@angular/router": "~8.2.13",
+    "@types/mathjs": "^6.0.4",
     "lodash": "^4.17.15",
+    "mathjs": "^6.5.0",
+    "primeicons": "2.0.0",
+    "primeng": "9.0.0-rc.2",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"

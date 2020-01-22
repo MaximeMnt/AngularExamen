@@ -1,0 +1,13 @@
+.oef1 {
+  width: fit-content;
+}
+.oef3{
+    width: 250px;
+    height: 250px;
+    background-color: red;
+}
+.oef1, .oef2, .oef3, .oef4, .oef5{
+    border: 2px solid black;
+    padding: 10px;
+    margin: 2px;
+}
