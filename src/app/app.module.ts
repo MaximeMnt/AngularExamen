@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
+import {FormsModule} from '@angular/Forms';
 import { FormsModule } from '@angular/forms'
 import {ButtonModule} from 'primeng/button';
 import {ColorPickerModule} from 'primeng/colorpicker';
@@ -15,6 +16,13 @@ import { RouterModule } from '@angular/router';
 import { NavigatieComponent } from './navigatie/navigatie.component';
 import { AmauryComponent } from './amaury/amaury.component';
 import { UsmanComponent } from './usman/usman.component';
+import { AngularDeel3Component } from './amaury/angular-deel3/angular-deel3.component';
+import {ButtonModule} from 'primeng/button';
+import {CardModule} from 'primeng/card';
+import { Angulardeel4Component } from './amaury/angulardeel4/angulardeel4.component';
+import {InputTextModule} from 'primeng/inputtext';
+import {PanelModule} from 'primeng/panel';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
 
 @NgModule({
   declarations: [
@@ -22,9 +30,12 @@ import { UsmanComponent } from './usman/usman.component';
     MaximeComponent,
     NavigatieComponent,
     AmauryComponent,
-    UsmanComponent
+    UsmanComponent,
+    AngularDeel3Component,
+    Angulardeel4Component
   ],
   imports: [
+    PanelModule,
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,

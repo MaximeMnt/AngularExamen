@@ -7,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AmauryComponent implements OnInit {
 
+  input: string = "";
+  boodschappen : string[] = [];
+  addBoodschap(){
+    this.boodschappen.push(this.input)
+  }
   constructor() { }
 
   ngOnInit() {
