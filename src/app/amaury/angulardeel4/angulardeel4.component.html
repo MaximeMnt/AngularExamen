@@ -1,0 +1,53 @@
+<div class="oef1">
+  <p-card
+    header="Advanced Card"
+    subheader="Subheader"
+    [style]="{ width: '360px' }"
+    styleClass="ui-card-shadow"
+  >
+    <p-header>
+      <img src="Card" [src]="imageUrl" />
+    </p-header>
+    <div>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed
+      consequuntur error repudiandae numquam deserunt quisquam repellat libero
+      asperiores earum nam nobis, culpa ratione quam perferendis esse,
+      cupiditate neque quas!
+    </div>
+  </p-card>
+</div>
+<div class="oef2">
+<button (click)="setValue(in1.value)" pButton type="button" label={{counter}} class="ui-button-rounded"></button>
+<input #in1 type="number" value="0">
+</div>
+<div class="oef3" (mousemove)="doSomething($event)">
+<p>{{coords}}</p>
+</div>
+
+
+<div class="oef4">
+    <span class="ui-float-label" style="margin-top: 30px;">
+        <input #inputValue (keyup)="changeButtenClickable(inputValue.value)" id="float-input" type="text" size="30" pInputText> 
+        <label for="float-input">Geef hier je item in</label>
+        <button (click)="addTodo(inputValue.value)" [disabled]="fieldEmpty" pButton type="button" style="margin-left: 3px;" label="Voeg toe" class="ui-button-success"></button>
+    </span>
+    <p *ngIf="TodoLijst.length==0">De lijst is leeg!</p>
+    <div *ngIf="TodoLijst">
+       <ol>
+       <li style="margin: 2px;" *ngFor="let data of TodoLijst">  {{data}}<button (click)="removeItem(data.indexOf())" style="margin-left: 4px;" pButton type="button" label="X" class="ui-button-warning"></button></li>
+       </ol>
+    </div>
+</div>
+
+<div class="oef5">
+    <p-panel header="Calculator">
+        <input type="text" disabled pInputText placeholder="0,00" value="{{display}}">
+        <table>
+          <tr *ngFor="let row of numbers">
+            <td *ngFor="let number of row">
+              <button pButton label="{{number}}" (click)="Getal(number)"></button>
+            </td>
+          </tr>
+        </table>
+      </p-panel>
+</div>
