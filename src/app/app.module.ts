@@ -23,7 +23,6 @@ import { UsmanComponent } from './usman/usman.component';
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    FormsModule,
     RouterModule.forRoot([
       {path: "Maxime",component:MaximeComponent},
       {path: "Amaury", component: AmauryComponent},
