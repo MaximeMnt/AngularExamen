@@ -1,14 +1,19 @@
 <html>  
+    <header>
+        <app-navigatie></app-navigatie>
+    </header>
 <body>
 
-<app-navigatie></app-navigatie>
-<p>maxime is hot!</p>
+
+<h1><b>Maxime is nen heten teen!</b></h1>
 <div id="datetime"><p>{{date | date: 'HH:mm:ss'}}</p></div>
 
 {{counter}}
 <br><br>
 {{RandomNumber}}
-
+<br>
+<input #input1 type="text" value="5"/>
+<button (click)="doSome(input1.value)">dosomething</button>
 
 <table *ngIf="data">
 
@@ -25,12 +30,24 @@
 <input type="text" placeholder="typ iets moois hier" [(ngModel)]="textValue" (keypress)="checkIfChanged()" /><br><br>
 <button [disabled]="buttonStatus" (click)="addValue()">klik op mij als je kan!</button>
 
+
 <tr *ngFor="let item of userData">
     <td>
         {{item}}
     </td>
 </tr>
 
+<div *ngIf="!buttonStatus">
 
+<p><b>kies nu je favoriete dingetje</b></p>
+<select [(ngModel)]="keuze" (click)="validateKeuze()">
+<option value="0" *ngFor="let item of userData">{{item}}</option>
+<option value="1" >Usman Is homo</option>
+
+</select>
+<h1 *ngIf="KeuzeReturnValue" id="keuze">{{KeuzeReturnValue}}</h1>
+
+
+</div>
 </body>
 </html>

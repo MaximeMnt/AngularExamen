@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as _ from 'lodash';    
- 
+
 
 @Component({
   selector: 'app-maxime',
@@ -18,7 +18,8 @@ data: string[] = [ "koek","kaas", "vis", "croissant fromage" ];
 userData: string[] = [];
 buttonStatus:boolean = true;
 textValue:string;
-
+keuze:number;
+KeuzeReturnValue: string;
 
 
 constructor() {
@@ -35,6 +36,8 @@ constructor() {
   },2000);
 
     this.checkIfChanged();
+
+
  }
 
 
@@ -51,6 +54,18 @@ addValue = () => {
   }
   this.userData.push(this.textValue);
 }
+
+validateKeuze= () =>{
+  if(this.keuze==1){
+    this.KeuzeReturnValue = "LEGENDARY KEUZE!"
+  } else this.KeuzeReturnValue = "Saaie keuze :("
+}
+
+doSome = (a:number) =>{
+  return alert((a*a) + " joehoe!");
+}
+
+
 
   ngOnInit() {
   }
