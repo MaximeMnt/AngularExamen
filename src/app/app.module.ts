@@ -6,8 +6,6 @@ import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
 import { InputTextModule } from 'primeng/inputtext';
 import {DropdownModule} from 'primeng/dropdown';
-
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MaximeComponent } from './maxime/maxime.component';
@@ -15,14 +13,15 @@ import { RouterModule } from '@angular/router';
 import { NavigatieComponent } from './navigatie/navigatie.component';
 import { AmauryComponent } from './amaury/amaury.component';
 import { UsmanComponent } from './usman/usman.component';
-import { AngularDeel3Component } from './amaury/angular-deel3/angular-deel3.component';
+import { Angulardeel3Component } from './amaury/angulardeel3/angulardeel3.component';
 import { Angulardeel4Component } from './amaury/angulardeel4/angulardeel4.component';
+import { Angulardeel5Component } from './amaury/angulardeel5/angulardeel5.component';
 import { PanelModule } from 'primeng/panel';
 import { Maximedeel5Component } from './maxime/maximedeel5/maximedeel5.component';
 import { Angularoef2Component } from './usman/angularoef2/angularoef2.component';
 import { Usmandeel5Component } from './usman/usmandeel5/usmandeel5.component';
 import { Usmandeel4Component } from './usman/usmandeel4/usmandeel4.component';
-
+import {ToggleButtonModule} from 'primeng/togglebutton';
 
 @NgModule({
   declarations: [
@@ -33,6 +32,7 @@ import { Usmandeel4Component } from './usman/usmandeel4/usmandeel4.component';
     UsmanComponent,
     Angulardeel3Component,
     Angulardeel4Component,
+    Angulardeel5Component,
     Maximedeel5Component,
     Angularoef2Component,
     Usmandeel5Component,
