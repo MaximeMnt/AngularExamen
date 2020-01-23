@@ -6,8 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./usmandeel4.component.css']
 })
 export class Usmandeel4Component implements OnInit {
+  
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }

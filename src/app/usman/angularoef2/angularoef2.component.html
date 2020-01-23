@@ -1,11 +1,7 @@
-<p>angularoef2 works!</p>
-<h1>oef 2 - permanente evaluatie</h1>
-
+<h3>oef 2 - permanente evaluatie</h3>
 <p>met hoeveel procent zekerheid weet je dat Joey een mongool is?</p>
 <p><input #in1 type="text" value="inval1" (keypress)="Showreply(in1.value)" [(ngModel)]="textValue"> %</p> <p> {{inputreply}}</p>
-
 <button (click)="Submit(in1.value)">Submit</button> <br><hr>
-
 <button (click)="ViewHistory()">View History</button>
 <div *ngIf="showHistory">
     <ol *ngFor="let data of Data">
