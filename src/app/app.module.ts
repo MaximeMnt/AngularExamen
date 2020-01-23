@@ -21,6 +21,7 @@ import { PanelModule } from 'primeng/panel';
 import { Maximedeel5Component } from './maxime/maximedeel5/maximedeel5.component';
 import { Angularoef2Component } from './usman/angularoef2/angularoef2.component';
 import { Usmandeel5Component } from './usman/usmandeel5/usmandeel5.component';
+import { Usmandeel4Component } from './usman/usmandeel4/usmandeel4.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { Usmandeel5Component } from './usman/usmandeel5/usmandeel5.component';
     Angulardeel4Component,
     Maximedeel5Component,
     Angularoef2Component,
-    Usmandeel5Component
+    Usmandeel5Component,
+    Usmandeel4Component
   ],
   imports: [
     PanelModule,
