@@ -22,6 +22,7 @@ import { Angularoef2Component } from './usman/angularoef2/angularoef2.component'
 import { Usmandeel5Component } from './usman/usmandeel5/usmandeel5.component';
 import { Usmandeel4Component } from './usman/usmandeel4/usmandeel4.component';
 import {ToggleButtonModule} from 'primeng/togglebutton';
+import {Angulardeelsub5Component} from './amaury/angulardeel5/angulardeelsub5/angulardeelsub5.component'
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import {ToggleButtonModule} from 'primeng/togglebutton';
     Angulardeel3Component,
     Angulardeel4Component,
     Angulardeel5Component,
+    Angulardeelsub5Component,
     Maximedeel5Component,
     Angularoef2Component,
     Usmandeel5Component,
