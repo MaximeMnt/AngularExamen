@@ -7,9 +7,6 @@ import { CardModule } from 'primeng/card';
 import { InputTextModule } from 'primeng/inputtext';
 import {DropdownModule} from 'primeng/dropdown';
 import {ToggleButtonModule} from 'primeng/togglebutton';
-
-
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MaximeComponent } from './maxime/maxime.component';
@@ -25,7 +22,11 @@ import { Maximedeel5Component } from './maxime/maximedeel5/maximedeel5.component
 import { Angularoef2Component } from './usman/angularoef2/angularoef2.component';
 import { Usmandeel5Component } from './usman/usmandeel5/usmandeel5.component';
 import { Usmandeel4Component } from './usman/usmandeel4/usmandeel4.component';
-import{Angulardeelsub5Component} from './amaury/angulardeel5/angulardeelsub5/angulardeelsub5.component'
+import{Angulardeelsub5Component} from './amaury/angulardeel5/angulardeelsub5/angulardeelsub5.component';
+import { PokemonComponent } from './amaury/pokemon/pokemon.component'
+import { PokeSvcService } from './amaury/services/poke-svc.service';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -42,8 +43,10 @@ import{Angulardeelsub5Component} from './amaury/angulardeel5/angulardeelsub5/ang
     Angularoef2Component,
     Usmandeel5Component,
     Usmandeel4Component,
+    PokemonComponent,
   ],
   imports: [
+    HttpClientModule,
     ToggleButtonModule,
     DropdownModule,
     PanelModule,
@@ -63,7 +66,9 @@ import{Angulardeelsub5Component} from './amaury/angulardeel5/angulardeelsub5/ang
       { path: "", redirectTo: "Maxime", pathMatch: "full" }
     ], { useHash: true })
   ],
-  providers: [],
+  providers: [
+    PokeSvcService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
