@@ -80,7 +80,7 @@ export class MaximeComponent implements OnInit {
   }
 
   addValue = () => {
-    if (this.textValue == "penis") {
+    if (this.textValue == "kaas") {
       alert("wow jij wist het geheime wachtwoord wtf");
     }
     this.userData.push(this.textValue);

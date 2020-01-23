@@ -3,7 +3,6 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import {FormsModule} from '@angular/Forms';
 import {ButtonModule} from 'primeng/button';
-import {ColorPickerModule} from 'primeng/colorpicker';
 import {CardModule} from 'primeng/card';
 import {InputTextModule} from 'primeng/inputtext';
 
@@ -18,6 +17,7 @@ import { UsmanComponent } from './usman/usman.component';
 import { AngularDeel3Component } from './amaury/angular-deel3/angular-deel3.component';
 import { Angulardeel4Component } from './amaury/angulardeel4/angulardeel4.component';
 import {PanelModule} from 'primeng/panel';
+import { Maximedeel5Component } from './maxime/maximedeel5/maximedeel5.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +27,8 @@ import {PanelModule} from 'primeng/panel';
     AmauryComponent,
     UsmanComponent,
     AngularDeel3Component,
-    Angulardeel4Component
+    Angulardeel4Component,
+    Maximedeel5Component
   ],
   imports: [
     PanelModule,
@@ -36,7 +37,6 @@ import {PanelModule} from 'primeng/panel';
     AppRoutingModule,
     FormsModule,
     ButtonModule,
-    ColorPickerModule,
     CardModule,
     InputTextModule,
     RouterModule.forRoot([
