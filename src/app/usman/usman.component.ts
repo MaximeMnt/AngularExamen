@@ -6,12 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./usman.component.css']
 })
 export class UsmanComponent implements OnInit {
-
   Data: string[] = new Array;
   showHistory: boolean = false;
   inval1: string = "";
   inputreply: string = "";
-
+  value: string;
 
   constructor() { 
     
@@ -45,6 +44,5 @@ export class UsmanComponent implements OnInit {
     } else if (value <= 99) {
       this.inputreply = "Ziet er goed uit";
     }
-
   }
 }

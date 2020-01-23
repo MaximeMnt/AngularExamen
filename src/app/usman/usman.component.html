@@ -2,13 +2,16 @@
 <h1>oef 2 - permanente evaluatie</h1>
 
 <p>met hoeveel procent zekerheid weet je dat Joey een mongool is?</p>
-<p><input #in1 type="text" [value]="inval1" (onchange)="Showreply(in1.value)"> %</p> <p> {{inputreply}}</p>
+<p><input #in1 type="text" value="inval1" (keypress)="Showreply(in1.value)" [(ngModel)]="textValue"> %</p> <p> {{inputreply}}</p>
 
 <button (click)="Submit(in1.value)">Submit</button> <br><hr>
 
 <button (click)="ViewHistory()">View History</button>
 <div *ngIf="showHistory">
-<ol *ngFor="let data of Data">
-    <li>{{data}}%</li>
-</ol>
+    <ol *ngFor="let data of Data">
+        <li>{{data}}%</li>
+    </ol>
 </div>
+
+<h1>oef 3 - permanente evaluatie</h1>
+
