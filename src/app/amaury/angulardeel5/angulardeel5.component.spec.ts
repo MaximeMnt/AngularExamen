@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AngularDeel3Component } from './angular-deel3.component';
+import { Angulardeel5Component } from './angulardeel5.component';
 
-describe('AngularDeel3Component', () => {
-  let component: AngularDeel3Component;
-  let fixture: ComponentFixture<AngularDeel3Component>;
+describe('Angulardeel5Component', () => {
+  let component: Angulardeel5Component;
+  let fixture: ComponentFixture<Angulardeel5Component>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AngularDeel3Component ]
+      declarations: [ Angulardeel5Component ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AngularDeel3Component);
+    fixture = TestBed.createComponent(Angulardeel5Component);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

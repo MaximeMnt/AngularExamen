@@ -1,0 +1,43 @@
+<div class="oef1">
+    <p-card
+    header="Advanced Card"
+    subheader="Subheader"
+    [style]="{ width: '360px' }"
+    styleClass="ui-card-shadow"
+  >
+    <p-header>
+      <img src="Card" [src]="imageUrl" />
+    </p-header>
+    <div>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed
+      consequuntur error repudiandae numquam deserunt quisquam repellat libero
+      asperiores earum nam nobis, culpa ratione quam perferendis esse,
+      cupiditate neque quas!
+    </div>
+  </p-card>
+
+    <p-dropdown [options]="options" #value (onClick)="randomImage(value.value)"></p-dropdown>
+    <button (click)="setValue(in1.value)" pButton type="button" label={{counter}} class="ui-button-rounded"></button>
+    <input #in1 type="number" value="0">
+</div>
+<div class="oef2">
+    <input [(ngModel)]="Persoon.naam" type="text" pInputText placeholder="Naam"/>
+    <input [(ngModel)]="Persoon.voornaam" type="text" pInputText placeholder="Voornaam"/><br>
+    <input [(ngModel)]="Persoon.straat" type="text" pInputText placeholder="Straat"/>
+    <input [(ngModel)]="Persoon.nr" type="text" pInputText placeholder="Nr."/><br>
+    <input [(ngModel)]="Persoon.gemeente" type="text" pInputText placeholder="Gemeente"/><br>
+    <button (click)="showInfo=true" pButton type="button" label="Bewaren"></button>
+    <div *ngIf="showInfo">
+    <p>{{Persoon.naam}} {{Persoon.voornaam}}</p>
+    <p>{{Persoon.straat}} {{Persoon.nr}}</p>
+    <p>{{Persoon.gemeente}}</p>
+    </div>
+    
+</div>
+<div class="oef3">
+    <input #in1 type="number" value="0" placeholder="min. random waarde">
+    <input #in2 type="number" value="0" placeholder="max. random waarde">
+    <p-toggleButton [(ngModel)]="startStop"></p-toggleButton>
+    <app-angulardeelsub5></app-angulardeelsub5>
+
+</div>
