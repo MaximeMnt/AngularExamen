@@ -35,9 +35,9 @@
     
 </div>
 <div class="oef3">
-    <input #in1 type="number" value="0" placeholder="min. random waarde">
-    <input #in2 type="number" value="0" placeholder="max. random waarde">
-    <p-toggleButton [(ngModel)]="startStop"></p-toggleButton>
-    <app-angulardeelsub5></app-angulardeelsub5>
+    <input [(ngModel)]="min" type="number" value="0" placeholder="min. random waarde">
+    <input [(ngModel)]="max" type="number" value="0" placeholder="max. random waarde">
+    <input [(ngModel)]="startStop" type="checkbox" name="start?"><br>
+    <app-angulardeelsub5 [min]="min" [max]="max" [startStop]="startStop"></app-angulardeelsub5>
 
 </div>

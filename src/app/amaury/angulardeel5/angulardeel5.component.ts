@@ -18,9 +18,9 @@ export class Angulardeel5Component implements OnInit {
   Persoon = {} as IPersoon;
 
   //oef parent - child
-  @Input("min") min: number = 0;
-  @Input("max") max: number = 10;
-  startStop: boolean;
+  min: number = 0;
+  max: number = 10;
+  startStop: boolean= true;
 
   constructor() {
     for(var i=0; i < 152; i++){

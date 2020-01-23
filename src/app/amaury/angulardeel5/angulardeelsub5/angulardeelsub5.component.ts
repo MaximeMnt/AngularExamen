@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import * as _ from 'lodash';
 
 @Component({
@@ -7,21 +7,21 @@ import * as _ from 'lodash';
   styleUrls: ['./angulardeelsub5.component.css']
 })
 export class Angulardeelsub5Component implements OnInit {
-  min: number = 0;
-  max: number = 10;
+  @Input() min: number;
+  @Input() max: number;
   result: number;
-  startStop: boolean;
+  @Input() startStop: boolean;
   constructor() {
-    setInterval(()=>{
-      if(this.startStop==true){
+        setInterval(()=>{
       this.randomNumber();
-    }}, 1000)
+    }, 1000)
    }
 
   ngOnInit() {
   }
   randomNumber(){
+    if(this.startStop==true){
     this.result = _.random(this.min, this.max)
-  }
+  }}
 
 }
