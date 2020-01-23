@@ -1,17 +1,9 @@
 <app-navigatie></app-navigatie>
-<h1>oef 2 - permanente evaluatie</h1>
 
-<p>met hoeveel procent zekerheid weet je dat Joey een mongool is?</p>
-<p><input #in1 type="text" value="inval1" (keypress)="Showreply(in1.value)" [(ngModel)]="textValue"> %</p> <p> {{inputreply}}</p>
+<div><app-angularoef2></app-angularoef2></div>
 
-<button (click)="Submit(in1.value)">Submit</button> <br><hr>
+<br><hr><br>
 
-<button (click)="ViewHistory()">View History</button>
-<div *ngIf="showHistory">
-    <ol *ngFor="let data of Data">
-        <li>{{data}}%</li>
-    </ol>
-</div>
+<div><app-usmandeel5></app-usmandeel5></div>
 
-<h1>oef 3 - permanente evaluatie</h1>
 

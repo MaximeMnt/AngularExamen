@@ -18,6 +18,8 @@ import { AngularDeel3Component } from './amaury/angular-deel3/angular-deel3.comp
 import { Angulardeel4Component } from './amaury/angulardeel4/angulardeel4.component';
 import {PanelModule} from 'primeng/panel';
 import { Maximedeel5Component } from './maxime/maximedeel5/maximedeel5.component';
+import { Angularoef2Component } from './usman/angularoef2/angularoef2.component';
+import { Usmandeel5Component } from './usman/usmandeel5/usmandeel5.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { Maximedeel5Component } from './maxime/maximedeel5/maximedeel5.component
     UsmanComponent,
     AngularDeel3Component,
     Angulardeel4Component,
-    Maximedeel5Component
+    Maximedeel5Component,
+    Angularoef2Component,
+    Usmandeel5Component
   ],
   imports: [
     PanelModule,
