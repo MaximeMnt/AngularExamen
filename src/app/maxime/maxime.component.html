@@ -1,123 +1,131 @@
-<html>  
-    <header>
-        <app-navigatie></app-navigatie>
-    </header>
+<html>
+<header>
+    <app-navigatie></app-navigatie>
+</header>
+
 <body>
 
 
-<h1><b>Maxime works!</b></h1>
-<div id="datetime"><p>{{date | date: 'HH:mm:ss'}}</p></div>
+    <h1><b>Maxime works!</b></h1>
+    <div id="datetime">
+        <p>{{date | date: 'HH:mm:ss'}}</p>
+    </div>
 
-{{counter}}
-<br><br>
-{{RandomNumber}}
-<br>
-<input #input1 type="text" value="5"/>
-<button (click)="doSome(input1.value)">dosomething</button>
+    {{counter}}
+    <br><br>
+    {{RandomNumber}}
+    <br>
+    <input #input1 type="text" value="5" />
+    <button (click)="doSome(input1.value)">dosomething</button>
 
-<table *ngIf="data">
+    <table *ngIf="data">
 
-    <tr #in10 type="number" value="5" *ngFor="let item of data">
+        <tr #in10 type="number" value="5" *ngFor="let item of data">
+            <td>
+                <i><b>{{item}}</b></i>
+            </td>
+        </tr>
+
+    </table>
+
+    <br><br><br>
+    <p><b>Geef iets moois in, maak papa trots!</b></p>
+    <input type="text" placeholder="typ iets moois hier" [(ngModel)]="textValue" (keyup)="checkIfChanged()" /><br><br>
+    <button [disabled]="buttonStatus" (click)="addValue()">klik op mij als je kan!</button>
+
+    <tr *ngFor="let item of userData">
         <td>
-        <i><b>{{item}}</b></i>
+            {{item}}
         </td>
     </tr>
 
-</table>
+    <div *ngIf="!buttonStatus">
 
-<br><br><br>
-<p><b>Geef iets moois in, maak papa trots!</b></p>
-<input type="text" placeholder="typ iets moois hier" [(ngModel)]="textValue" (keyup)="checkIfChanged()" /><br><br>
-<button [disabled]="buttonStatus" (click)="addValue()">klik op mij als je kan!</button>
+        <p><b>kies nu je favoriete dingetje</b></p>
+        <select [(ngModel)]="keuze" (click)="validateKeuze()">
+            <option value="0" *ngFor="let item of userData">{{item}}</option>
+            <option value="1">Usman Is homo</option>
 
+        </select>
+        <h1 *ngIf="KeuzeReturnValue" id="keuze">{{KeuzeReturnValue}}</h1>
+    </div>
+    <br><br>
+    <button pButton type="button" label="Yes" class="ui-button-danger"></button>
+    <button pButton type="button" label="No" class="ui-button-info"></button>
+    <br><br>
+    <button pButton type="button" label="Hallo Wereld" class="ui-button-raised ui-button-rounded"></button>
 
-<tr *ngFor="let item of userData">
-    <td>
-        {{item}}
-    </td>
-</tr>
-
-<div *ngIf="!buttonStatus">
-
-<p><b>kies nu je favoriete dingetje</b></p>
-<select [(ngModel)]="keuze" (click)="validateKeuze()">
-<option value="0" *ngFor="let item of userData">{{item}}</option>
-<option value="1" >Usman Is homo</option>
-
-</select>
-<h1 *ngIf="KeuzeReturnValue" id="keuze">{{KeuzeReturnValue}}</h1>
+    <br><br>
+    <br>
 
 
-</div>
-<br><br>
-<button pButton type="button" label="Yes" class="ui-button-danger"></button>
-<button pButton type="button" label="No" class="ui-button-info"></button>
-<br><br>
-<button pButton type="button" label="Hallo Wereld" class="ui-button-raised ui-button-rounded"></button>
+    <hr>
+    <h3>Angular 4 oefeningen:</h3>
+    <div *ngIf="imageUrl">
+        <p-card header="Advanced Card" subheader="Subheader" [style]="{width: '360px'}" styleClass="ui-card-shadow">
+            <p-header>
+                <img src="Card" [src]="imageUrl">
+            </p-header>
+            <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae
+                numquam deserunt
+                quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate
+                neque quas!</div>
+        </p-card>
+    </div>
 
-<br><br>
-<br>
+    <h3>NumberShit</h3>
 
-
-<hr>
-<h3>Angular 4 oefeningen:</h3>
-<div *ngIf="imageUrl">
-<p-card header="Advanced Card" subheader="Subheader" [style]="{width: '360px'}" styleClass="ui-card-shadow">
-    <p-header>
-        <img src="Card" [src]="imageUrl">
-    </p-header>
-    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
-        quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</div>   
-</p-card>
-</div>
-
-<h3>NumberShit</h3>
-
-<button pButton type="button" class="ui-button-raised ui-button-rounded" (click)="setInputValue(inputValue.value)" label="{{calcCounter}}"></button>
-<input type="number" value="0" #inputValue>
-<button pButton type="button" class="ui-button-raised ui-button-rounded" (click)="Increment()" label="{{calcCounter}}"></button>
+    <button pButton type="button" class="ui-button-raised ui-button-rounded" (click)="setInputValue(inputValue.value)"
+        label="{{calcCounter}}"></button>
+    <input type="number" value="0" #inputValue>
+    <button pButton type="button" class="ui-button-raised ui-button-rounded" (click)="Increment()"
+        label="{{calcCounter}}"></button>
 
 
-<h3>Event Binding 4</h3>
+    <h3>Event Binding 4</h3>
 
-<div id="divElement" (mousemove)=getCoords($event)>{{coords}}</div>
+    <div id="divElement" (mousemove)=getCoords($event)>{{coords}}</div>
 
-<br><br><br>
+    <br><br><br>
 
-<h3>ToDo lijst</h3>
+    <h3>ToDo lijst</h3>
 
-<span class="ui-float-label">
-    <input id="float-input" type="text" size="30" pInputText #valueInputTodoList (keyup)="todoChanged(valueInputTodoList.value)"> 
-    <label for="float-input">Username</label>
-    <button pButton type="button" icon="pi pi-check" [disabled]=buttonIsEmpty (click)=ToDoListAdd(valueInputTodoList.value)></button>
+    <span class="ui-float-label">
+        <input id="float-input" type="text" size="30" pInputText #valueInputTodoList
+            (keyup)="todoChanged(valueInputTodoList.value)">
+        <label for="float-input">Username</label>
+        <button pButton type="button" icon="pi pi-check" [disabled]=buttonIsEmpty
+            (click)=ToDoListAdd(valueInputTodoList.value)></button>
 
-</span>
+    </span>
 
-<br>
-<ol *ngIf="toDoItems">
-<li *ngFor="let item of toDoItems">{{item}} <button pButton type="button" label="X" class="ui-button-rounded" (click)="deleteitem(item.indexOf())"></button>
-</li>
-</ol>
-<p *ngIf="toDoItems.length == 0">de lijst is leeg.</p>
+    <br>
+    <ol *ngIf="toDoItems">
+        <li *ngFor="let item of toDoItems">{{item}} <button pButton type="button" label="X" class="ui-button-rounded"
+                (click)="deleteitem(item.indexOf())"></button>
+        </li>
+    </ol>
+    <p *ngIf="toDoItems.length == 0">de lijst is leeg.</p>
 
 
-<br><br><br>
-<h3>Calculator</h3>
-<div>
-<input id="input" disabled type="text" size="30" pInputText value="{{display}}">
-    <table>
-        <tr *ngFor="let row of numbers">
-          <td *ngFor="let number of row">
-            <button pButton label="{{number}}" (click)="Getal(number)"></button>
-          </td>
-        </tr>
-      </table>
-</div>
+    <br><br><br>
+    <h3>Calculator</h3>
+    <div>
+        <input id="input" disabled type="text" size="30" pInputText value="{{display}}">
+        <table>
+            <tr *ngFor="let row of numbers">
+                <td *ngFor="let number of row">
+                    <button pButton label="{{number}}" (click)="Getal(number)"></button>
+                </td>
+            </tr>
+        </table>
+    </div>
 
-<br>
-<hr>
-<app-maximedeel5></app-maximedeel5>
+    <br>
+    <hr>
+    <app-maximedeel5></app-maximedeel5>
 
 
 </body>
+
 </html>
