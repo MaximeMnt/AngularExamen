@@ -7,7 +7,7 @@ import { CardModule } from 'primeng/card';
 import { InputTextModule } from 'primeng/inputtext';
 import {DropdownModule} from 'primeng/dropdown';
 import {ToggleButtonModule} from 'primeng/togglebutton';
-
+import {HttpClientModule} from '@angular/common/http/';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -26,6 +26,8 @@ import { Angularoef2Component } from './usman/angularoef2/angularoef2.component'
 import { Usmandeel5Component } from './usman/usmandeel5/usmandeel5.component';
 import { Usmandeel4Component } from './usman/usmandeel4/usmandeel4.component';
 import{Angulardeelsub5Component} from './amaury/angulardeel5/angulardeelsub5/angulardeelsub5.component'
+import { from } from 'rxjs';
+import { APIMaximeComponent } from './maxime/apimaxime/apimaxime.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +44,7 @@ import{Angulardeelsub5Component} from './amaury/angulardeel5/angulardeelsub5/ang
     Angularoef2Component,
     Usmandeel5Component,
     Usmandeel4Component,
+    APIMaximeComponent,
   ],
   imports: [
     ToggleButtonModule,
@@ -53,6 +56,7 @@ import{Angulardeelsub5Component} from './amaury/angulardeel5/angulardeelsub5/ang
     FormsModule,
     ButtonModule,
     CardModule,
+    HttpClientModule,
     ToggleButtonModule,
     DropdownModule,
     InputTextModule,
