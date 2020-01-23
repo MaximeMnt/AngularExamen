@@ -18,6 +18,8 @@ import { UsmanComponent } from './usman/usman.component';
 import { AngularDeel3Component } from './amaury/angular-deel3/angular-deel3.component';
 import { Angulardeel4Component } from './amaury/angulardeel4/angulardeel4.component';
 import {PanelModule} from 'primeng/panel';
+import { Angularoef2Component } from './usman/angularoef2/angularoef2.component';
+import { Usmandeel5Component } from './usman/usmandeel5/usmandeel5.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import {PanelModule} from 'primeng/panel';
     AmauryComponent,
     UsmanComponent,
     AngularDeel3Component,
-    Angulardeel4Component
+    Angulardeel4Component,
+    Angularoef2Component,
+    Usmandeel5Component
   ],
   imports: [
     PanelModule,
