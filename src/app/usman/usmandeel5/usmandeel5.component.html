@@ -1,1 +1,24 @@
-<h1>Deel 4</h1>
+<h1>Deel 5</h1>
+
+
+<p-card
+    header="Choose image"
+    [style]="{ width: '360px' }"
+    styleClass="ui-card-shadow">
+    <p-header>
+        <img src="Card" [src]="imageUrl" alt="image">
+    </p-header>
+        <p-dropdown [filter]="true" name="fieldName" ngDefaultControl [options]="options" [(ngModel)]="selectedImage"></p-dropdown>
+</p-card>
+<hr>
+<input pInputText [(ngModel)]="persoon.naam" placeholder="Naam" type="text">
+<input pInputText [(ngModel)]="persoon.voornaam" placeholder="Voornaam" type="text"><br>
+<input pInputText [(ngModel)]="persoon.straat" placeholder="Straat" type="text">
+<input pInputText [(ngModel)]="persoon.nr" placeholder="Nr" type="text"><br>
+<input pInputText [(ngModel)]="persoon.gemeente" placeholder="Gemeente" type="text">
+<button pButton (click)= ShowInfo() label="Bewaren"></button>
+<div *ngIf="showInfo"><p>{{persoon.naam}} <br>
+    {{persoon.voornaam}} <br>
+    {{persoon.straat}} <br>
+    {{persoon.nr}} <br>
+    {{persoon.gemeente}}</p></div>
