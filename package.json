@@ -21,7 +21,7 @@
     "@angular/platform-browser-dynamic": "~8.2.13",
     "@angular/router": "~8.2.13",
     "@types/mathjs": "^6.0.4",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "lodash": "^4.17.15",
     "mathjs": "^6.5.0",
     "primeicons": "^2.0.0",
